@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .foot{
+            position: fixed;
+            left: 0; bottom: 0;
+            height: 7vh;
+            width:100%;
+            background: #12141D;
+            -webkit-border-radius:5px 5px 0px 0px;
+            -moz-border-radius:5px 5px 0px 0px;
+            border-radius:5px 5px 0px 0px;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+        }
+        .foot h5{
+            color: #8e8e8e;
+        }
+    </style>
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            </button>
+            <a class="navbar-brand" href="/">Textfile<b style="color: #CA812E;">API</b></a>
+        </div>
+        <div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#" data-toggle="modal" data-target="#myModal">How to use</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</nav>
+<br>
+<br>
+
+<div id="myModal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header"><button class="close" type="button" data-dismiss="modal">×</button>
+                <h4 class="modal-title" align="center">Description</h4>
+            </div>
+            <div class="modal-body"><p align="center"><i>To find word you need enter your values</i><hr>
+
+                <b>Query</b> - your word or char-combination you want to find in the file.<br>
+
+                <b>Limit</b> - integer which represents max number of chars in text that API should return. If parameter is blank or missing it will 10000 chars by default.<br>
+
+                    <b>Length</b> - max string length that API should return string which doesn't exceed that number or if there is no such strings empty response. If parameter is blank or missing it will ignore.</p></div>
+            <div class="modal-footer"><button class="btn btn-warning" type="button" data-dismiss="modal" style="background: #CA812E;">Close</button></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid" align="center" ;>
+    <form action="textfileAPI/" method="get" style="margin-top: 10%">
+        <h1>Enter your values:</h1>
+
+        <p>Query:<input id="q"  autofocus="" type="text" name="q"></p>
+        <p>Limit: <input id="limit"  type="text" name="limit"></p>
+        <p>Length:<input id="length"  type="text" name="length"></p>
+        <input id="metadata" type="hidden" name="metadata" value="true"/><br/>
+        <button type="submit" class="btn btn-warning" style="background: #CA812E; width: 70pt">Submit</button>
+
+    </form>
+</div>
+
+<footer>
+    <div class="foot">
+        <h5>Lviv 2017</h5>
+    </div>
+</footer>
+</body>
+</html>
